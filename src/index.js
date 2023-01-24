@@ -6,11 +6,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-const storage = [
-    "num_1",
-    "num_2",
-    "Traitor",
-];
+const storage = [];
 
 
 app.get('/storage', (req, res) => {
@@ -50,6 +46,8 @@ app.delete('/storage/:id', (req, res) => {
     storage.splice(index, 1)
     return statusComplete(res, 200, storage)
 });
+
+
 
 app.listen(PORT);
 
